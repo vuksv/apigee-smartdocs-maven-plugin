@@ -140,11 +140,18 @@ public class PortalRestUtil {
       while (it.hasNext()) {
         String namePart = (String) it.next();
         returnString += namePart;
-        //Seperate fields with underscore
+        //Separate fields with dash
         if(it.hasNext()) {
-            returnString += "_";
+            returnString += "-";
         }
       }
+      //Clean the return string to only include Alphanumeric characters and dash
+      returnString = returnString.replaceAll("[^A-Za-z0-9-]","");
+      //set Max length to be 255
+      if(returnString.length() > 255) {
+        returnString = returnString.substring(0,255);
+      }
+      logger.debug("API Model Name: " + returnString);
       return returnString;
     }
 

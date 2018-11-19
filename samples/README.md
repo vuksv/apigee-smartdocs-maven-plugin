@@ -120,7 +120,7 @@ If you would like to configure the model name of the SmartDoc on the developer p
         ...
     </configuration>
 
- The caret symbol (^) is used to separate which fields you want extracted from the info object and it will be replaced with underscore (_) in the name
+ The caret symbol (^) is used to separate which fields you want extracted from the info object and it will be replaced with dash (-) in the name
     
 The example config above would generate a model name based on the info object OpenAPI document. For instance, an OpenAPI document containing:
 ```json
@@ -133,7 +133,7 @@ The example config above would generate a model name based on the info object Op
   }
 }
 ```
-The model name would be `Canada_Hello-World-API`
+The model name would be `Canada-Hello-World-API`
 
 ### Troubleshooting
 

@@ -36,11 +36,11 @@
 
                       portal.model.config.name can be used to configure the modelName being sent to the SmartDocs API
                       Without this configuration, the default field used is the title
-                        The caret symbol (^) is used to separate which fields you want extracted from the info object and it will be replaced with _
+                        The caret symbol (^) is used to separate which fields you want extracted from the info object and it will be replaced with -
                         The pipe character is used to traverse into sub-items if necessary
                       For example, if the OpenAPI document contains { "info": { "title": "Hello World API", "contact": { "x-country": "Canada" } } }
                       And the config is as below "contact|x-country^title"
-                      The Model Name would be "Canada_Hello-World-API"
+                      The Model Name would be "Canada-Hello-World-API"
                 -->
                 <!--
                 <configuration>
